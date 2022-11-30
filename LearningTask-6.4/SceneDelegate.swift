@@ -16,6 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let pokemonStore: PokemonStore = PokemonLocalPersistence()
+               
+               let controller = window!.rootViewController as! PokemonViewController
+               controller.pokemonStore = pokemonStore
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
