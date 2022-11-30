@@ -8,6 +8,7 @@
 import Foundation
 
 enum Tipo: String {
+    
     case grama = "Grama"
     case fogo = "Fogo"
     case agua = "Água"
